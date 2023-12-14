@@ -8,5 +8,15 @@ namespace OOP_FinalProject
 {
     internal class WorldMap
     {
+        List<Location> Locations;
+
+        public void DisplayMap()
+        {
+            // TODO:
+            // load map image
+        
+            // display location buttons
+        
+        }
     }
 }
