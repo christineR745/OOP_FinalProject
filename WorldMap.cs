@@ -14,9 +14,15 @@ namespace OOP_FinalProject
         {
             // TODO:
             // load map image
+            form.BackgroundImage = Properties.Resources.worldMap;
+            form.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 
             // display location buttons
-
+            foreach(var location in Locations)
+            {
+                location.Button.Visible = true;
+                location.Button.Enabled = true;
+            }
         }
     }
 }
