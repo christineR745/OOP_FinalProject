@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_FinalProject
 {
-    internal class WorldMap
+    public class WorldMap
     {
         List<Location> Locations;
 
@@ -14,9 +14,9 @@ namespace OOP_FinalProject
         {
             // TODO:
             // load map image
-        
+
             // display location buttons
-        
+
         }
     }
 }
