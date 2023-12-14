@@ -15,6 +15,13 @@ namespace OOP_FinalProject
         public List<Item> ItemDrops;
         public int maxCoinDrop;
 
+        public Location(string name, Button button, int coinDrop = 0) 
+        { 
+            Name = name;
+            Button = button;
+            maxCoinDrop = coinDrop;
+        }
+
         public void LoadLocation()
         {
             // randomly choose enemies from list
