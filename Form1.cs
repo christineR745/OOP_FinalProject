@@ -19,6 +19,8 @@ namespace OOP_FinalProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(818, 996);
+
             // create map and location objects
             WorldMap map = new WorldMap();
             Location combatArea1 = new Location("combatArea1", btn_combatArea1, 25);
@@ -37,6 +39,27 @@ namespace OOP_FinalProject
             superPotion.Description = "Restores 50HP";
             Consumable megaPotion = new Consumable("Mega Potion", 1, 50);
             megaPotion.Description = "Fully restores HP";
+
+            Equipable shield = new Equipable("Shield", 10);
+            Equipable helm = new Equipable("Helm", 5);
+
+            Equipable sword = new Equipable("Sword", damage:25);
+            Equipable dagger = new Equipable("Dagger", damage:15);
+            Equipable bat = new Equipable("Bat", damage:10);
+
+
+
+            map.DisplayMap(this);
+        }
+
+        private void combatArea_Click(object sender, EventArgs e)
+        {
+            // Auto-combat method goes here
+        }
+
+        private void shop_Click(object sender, EventArgs e)
+        {
+            // Bring up shop items, either static or randomized or both
         }
     }
 }
