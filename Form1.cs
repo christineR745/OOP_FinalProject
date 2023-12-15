@@ -26,8 +26,17 @@ namespace OOP_FinalProject
             Location combatArea3 = new Location("combatArea3", btn_combatArea3, 50);
             Location combatArea4 = new Location("combatArea4", btn_combatArea4, 100);
             Location shop = new Location("shop", btn_shop);
-
             map.Locations = new List<Location>{ combatArea1, combatArea2, combatArea3, combatArea4, shop };
+
+            // create items
+            Consumable potion = new Consumable("Potion", 1, 10);
+            potion.Description = "Restores 10HP";
+            Consumable xPotion = new Consumable("X Potion", 1, 20);
+            xPotion.Description = "Restores 20HP";
+            Consumable superPotion = new Consumable("Super Potion", 1, 50);
+            superPotion.Description = "Restores 50HP";
+            Consumable megaPotion = new Consumable("Mega Potion", 1, 50);
+            megaPotion.Description = "Fully restores HP";
         }
     }
 }
