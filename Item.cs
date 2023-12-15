@@ -28,18 +28,27 @@ namespace OOP_FinalProject
     public class Consumable : Item 
     {
         public int Uses;
-        public int Charge;
+        public int Restore;
+        //public int Charge;
     
-        public Consumable(string name, int uses = 0, int charge = 0)
+        public Consumable(string name, int uses, int restore)
         {
             Name = name;
             Uses = uses;
-            Charge = charge;
+            Restore = restore;
         }
     
-        public virtual void Effect() 
+        public virtual void Effect(int currentHP) 
         {
-            
+            //capping HP at 100 for now
+            if(currentHP + Restore > 100)
+            {
+                currentHP = 100;
+            }
+            else
+            {
+                currentHP = currentHP + Restore;
+            }
         }
     }
 }
